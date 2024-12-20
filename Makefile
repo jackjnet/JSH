@@ -15,7 +15,6 @@ TESTS_DIR := tests
 BIN_DIR := bin
 SRCS := $(wildcard $(SRC_DIR)/*.c)
 OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o, $(SRCS)) $(LEX_OBJ) $(YACC_OBJ)
-CC := clang
 LINTER := clang-tidy
 FORMATTER := clang-format
 CFLAGS := -std=gnu23 -D _GNU_SOURCE -D __STDC_WANT_LIB_EXT1__ -Wall -Wextra -pedantic -I$(INCLUDE_DIR)
